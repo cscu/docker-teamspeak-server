@@ -2,8 +2,8 @@
 # -----------------------------------------------------------------------------
 # docker-teamspeak /start script
 #
-# Authors: Isaac Bythewood
-# Updated: Jan 25th, 2014
+# Authors: Isaac Bythewood, Mitchell Mohorovich
+# Updated: Jan 1st, 2016
 # -----------------------------------------------------------------------------
 
 # Make sure the teamspeak user can write to the volume
