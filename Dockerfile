@@ -26,7 +26,6 @@ RUN    tar zxf teamspeak3-server_linux-amd64-${tsv}.tar.gz; mv teamspeak3-server
 
 #Add user
 RUN useradd -s /bin/bash teamspeak
-RUN chown teamspeak /opt/teamspeak -R
 
 # Load in all of our config files.
 ADD    ./scripts/start /start

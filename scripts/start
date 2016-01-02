@@ -6,6 +6,9 @@
 # Updated: Jan 25th, 2014
 # -----------------------------------------------------------------------------
 
+# Make sure the teamspeak user can write to the volume
+mkdir -p /data/logs
+chown -R teamspeak /data
 
 # Checking if files exist to make sure we're backing up the database to data
 if [ ! -f /opt/teamspeak/ts3server.sqlitedb ] && [ -f /data/ts3server.sqlitedb ]
@@ -27,7 +30,9 @@ fi
 
 
 # Run the teamspeak server
-export LD_LIBRARY_PATH=/opt/teamspeak
 cd /opt/teamspeak
-./ts3server_linux_amd64 logpath=/data/logs/
+sudo -u teamspeak bash << EOF
+  export LD_LIBRARY_PATH=/opt/teamspeak
+  ./ts3server_linux_amd64 logpath=/data/logs/
+EOF
 
