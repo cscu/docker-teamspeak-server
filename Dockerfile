@@ -39,5 +39,4 @@ EXPOSE 30033
 EXPOSE 10011
 
 VOLUME ["/data"]
-USER	teamspeak
 CMD    ["/start"]
